@@ -9,7 +9,7 @@ const CategoryProducts = ({ category }) => {
   useEffect(() => {
     if (category) {
       axios
-        .get(`http://127.0.0.1:8000/api/products/category/${category}`)
+        .get(`/api/products/category/${category}`)
         .then((response) => {
           setProducts(response.data);
         });

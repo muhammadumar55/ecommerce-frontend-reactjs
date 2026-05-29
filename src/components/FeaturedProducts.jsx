@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/products/featured")
+      .get(`/api/products/featured`)
       .then((response) => {
         setProducts(response.data);
       })

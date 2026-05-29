@@ -10,7 +10,7 @@ const CreateProduct = () => {
 
   const handleCreate = async (data) => {
     await axios.post(
-      "http://127.0.0.1:8000/api/admin/products",
+      `/api/admin/products`,
       data
     );
 

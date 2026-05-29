@@ -7,7 +7,7 @@ const OrderHistory = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/orders")
+      .get(`/api/orders`)
       .then((response) => {
         setOrders(response.data);
       });

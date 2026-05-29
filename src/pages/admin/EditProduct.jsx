@@ -13,7 +13,7 @@ const EditProduct = () => {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api/admin/products`)
+      .get(`/api/admin/products`)
       .then((response) => {
         const found = response.data.find(
           (item) => item.id === parseInt(id)
@@ -24,7 +24,7 @@ const EditProduct = () => {
 
   const handleUpdate = async (data) => {
     await axios.put(
-      `http://127.0.0.1:8000/api/admin/products/${id}`,
+      `/api/admin/products/${id}`,
       data
     );
 

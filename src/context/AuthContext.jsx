@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
     const fetchUser = async () => {
         try {
             const response = await axios.get(
-                "http://127.0.0.1:8000/api/user"
+                `/api/user`
             );
             setUser(response.data);
         } catch (error) {
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
     /* Register */
     const register = async (formData) => {
         const response = await axios.post(
-            "http://127.0.0.1:8000/api/register",
+            `/api/register`,
             formData
         );
 
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
     /* Login */
     const login = async (formData) => {
         const response = await axios.post(
-            "http://127.0.0.1:8000/api/login",
+            `/api/login`,
             formData
         );
 
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
     /* Logout */
     const logout = async () => {
         try {
-            await axios.post("http://127.0.0.1:8000/api/logout");
+            await axios.post(`/api/logout`);
         } catch (error) { }
 
         setUser(null);

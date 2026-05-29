@@ -9,7 +9,7 @@ const AdminProducts = () => {
 
   const fetchProducts = async () => {
     const response = await axios.get(
-      "http://127.0.0.1:8000/api/admin/products"
+      `/api/admin/products`
     );
     setProducts(response.data);
   };
@@ -22,7 +22,7 @@ const AdminProducts = () => {
     if (!window.confirm("Delete this product?")) return;
 
     await axios.delete(
-      `http://127.0.0.1:8000/api/admin/products/${id}`
+      `/api/admin/products/${id}`
     );
 
     toast.success("Product deleted successfully!");
